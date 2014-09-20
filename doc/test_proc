@@ -1,0 +1,21 @@
+Purpose:
+Test the system calls for processes, i.e. exec, join and exit.
+
+Usage:
+-- nachos.ag.CoffGrader -x test_proc.coff -# output=test_proc.out
+
+Author:
+Xiangru Chen
+
+History:
+2008-12-24 Xiangru Chen: The first version.
+
+Dependencies:
+test_proc_child.coff
+	test_proc will exec it as children in order to see whether exec() and exit() works correctly.
+mustfail.coff
+	A program that will cause an unhandled exception and will be killed by the kernel.
+	Used to test whether the join() syscall returns the correct value when the child is killed.
+
+Note:
+This test needs a lot of physical pages, 256 is recommended if 8 pages are uses as stack.

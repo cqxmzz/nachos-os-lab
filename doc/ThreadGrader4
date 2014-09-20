@@ -1,0 +1,16 @@
+Purpose:
+ThreadGrader4: WaitUntil
+
+Test ThreadGrader4.a: Tests waitUntil to ensure it waits at least minimum amount of time 
+Test ThreadGrader4.b: Tests whether waitUntil actually wakes up at correct time 
+
+See also official test case guide.
+
+Author:
+isaacyang
+
+History:
+2008-11-26 isaacyang: first version
+
+Arguments:
+N/A

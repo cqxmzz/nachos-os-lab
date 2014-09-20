@@ -1,0 +1,20 @@
+Purpose:
+Test intensity memory access and parallel execution.
+
+Usage:
+-- nachos.ag.VMGrader -x vm_matrix.coff -# output=vm_matrix.out
+
+Usage2:
+-- nachos.ag.VMGrader -x vm_matrix2.coff -# output=vm_matrix.out
+
+Author:
+Yue Chen
+
+History:
+2010-1-8 Yue Chen: Change the stack page requirement to 8.
+2010-1-5 Yue Chen: The first version.
+
+Note:
+To run this testcase, your physical page should be no more than 16.
+On success, the program will output "success".
+Otherwise the program will output "incorrect value!" and "Test failed" or you may encounter other errors.

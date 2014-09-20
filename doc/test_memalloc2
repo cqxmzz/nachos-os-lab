@@ -1,0 +1,13 @@
+Purpose:
+Test memory allocation on multy processes.
+Test join after child has exited.
+
+Usage:
+-- nachos.ag.CoffGrader -x test_memalloc2.coff
+
+Author:
+Chunzhi Su
+
+History:
+2011-07-01 Chunzhi Su: The first version.
+

@@ -1,0 +1,30 @@
+Purpose:
+Test file system syscalls 
+
+Usage:
+-- nachos.ag.UserGrader1 -[] nachos/proj2/nachos.conf  -x grader_user1.coff -# testRoot = xxx
+
+Notice:
+	you may need to add function hasArgument to your AutoGrader.java
+		boolean hasArgument( String key ){
+			return testArgs.get( key ) != null;
+		}
+	And add getOpenCount() to your StubFileSystem
+		public int getOpenCount(){
+			return openCount;
+		}		
+
+Author:
+	Tianqi Chen
+
+History:
+	2008-12-28 Tianqi Chen: The first version
+	2008-01-09 Tianqi Chen: remove test6 
+	
+Arguments:
+	testRoot : the directory where the usergrader1.coff stores
+	
+Grader output:
+	grader will output the result of each checkpoint
+	if one checkpoint fails , grader will terminate and print Test Fail
+	you can find the check point in the c code of usergrader1.c and its children 

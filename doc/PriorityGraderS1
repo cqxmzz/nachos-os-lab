@@ -1,0 +1,107 @@
+Purpose:
+Test the priority scheduler (nachos.threads.PriorityScheduler).
+
+Usage:
+-- nachos.ag.PriorityGraderS1 -# threads=xxx,times=xxx,locks=xxx
+
+Author:
+Sangxia Huang
+
+Notes:
+	Please read the following notes before running this test.
+	*	The fewer locks you use, the more likely you will
+		find bugs.
+	*	The grader will verify all threads in the queues
+		with prefix "testThread #", this is defined in the
+		static field thdPrefix; please avoid using the
+		same prefix in other threads' name.
+	* 	Add ``nachos.'' to package name and imports
+		if there isn't, since I used a different package
+		structure.
+	*	Tree.printChild() can output a correct
+		donate relationship for you, and would be a good 
+		help (at least, for me) for debugging.
+	*	Use the debug flag 'Z' for detailed 
+		information about the test process. 
+		The grader output would be extremely long.
+		You may redirect it to a file or somewhere else.
+	*	I have changed visibility of a few fields 
+		(from private to public), in my own
+		nachos, and it is possible that I forgot to 
+		restore it. If there is any compilation error
+		due to this problem, please either report me
+		or change the corresponding visibility of your 
+		own ^_^
+	*	I am not quite sure whether the private data
+		structures of the grader needs to be protected
+		from concurrent visiting/changing. Please report 
+		me if you find any problem caused by that.
+	*	The commented code in acquireLock() is to check
+		consistency between lockholders and the grader's
+		data structure. You may use it to find out
+		bugs, either in your scheduler or in this grader.
+
+History:
+sixth version.
+	Updated the part which checks if the scheduler
+	is correct.
+	Corrected typo in this readme.
+	
+2008-12-23 Sangxia Huang: The fifth version.
+	Fixed a bug in acquireLock, which might cause
+	NullPointer Exception. Found by Xiangru Chen. 
+	(tick first, then the run if-test)
+
+2008-12-23 Sangxia Huang: The fourth version.
+	Very different from previous versions.
+	The mechanisms of lock acquiring and releasing
+	rewritten. Update internal data structure
+	when acquiring lock, and updates release lock
+	in readyThread.
+	
+	Added some other methods in order to support
+	inheritance by Lottery Grader.
+	
+2008-12-9 Sangxia Huang: The third version.
+	Fixed a bug in printChild(), and now the waiting threads 
+	could be displayed in a tree shape.
+	
+	Solved the problem when many threads acquire the same lock
+	at the same machine time (due to sleeping without re-enabling
+	interrupt). I added one line before every lock acquire
+	to tick.	
+	
+2008-12-8 Sangxia Huang: The second version.
+	2 bugs found by panjf, 1 fixed.
+	
+	Replaced joining testThreads with a Semaphore.
+	(not all the implementations donated priority in join)
+	
+	A known bug: Different threads may acquire the same lock
+	at the same time. The choice is unpredictable
+	(priority->time->hashcode, in fact). This could be fixed
+	by re-enabling interrupt explicitly, but I'm not sure
+	whether this would cause other problems.
+
+2008-12-7 Sangxia Huang: The first version.
+	The grader will fork #threads test threads, and initialize
+	#locks test locks. each thread would iterate #times times, in
+	which it chooses at random one of the following actions:
+			1) change its priority;
+			2) release a holding lock; 
+			3) acquire a lock
+			
+	Each time a thread is scheduled, the grader would check
+	the priority of EVERY thread that are supposed to be 
+	in the readyqueue, and verify whether the correct thread 
+	has been chosen. However, it would not be verified
+	in this version whether the threads are INDEED 
+	in the readyqueue.
+	
+	In order to avoid deadlock, the locks is  
+	acquired in some pre-defined order.	
+
+Arguments:
+threads: the number of test threads to be forked.
+times: the number of iterations each thread run.
+locks: the locks for which the threads would contend.

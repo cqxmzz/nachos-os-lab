@@ -1,0 +1,13 @@
+Purpose:
+Test memory re-allocation.
+Use many children to overwhelme the whole memory, run one by one.
+
+Usage:
+-- nachos.ag.CoffGrader -x test_memalloc3.coff -# output=test_memalloc3.out
+
+Author:
+Chunzhi Su
+
+History:
+2011-07-01 Chunzhi Su: The first version.
+

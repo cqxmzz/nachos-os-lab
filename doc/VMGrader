@@ -1,0 +1,15 @@
+Purpose:
+Provide a basic framework for phase3's testcase.
+
+Usage:
+-- nachos.ag.VMGrader -# swapFile=xxx
+
+Author:
+Xiangru Chen
+
+History:
+2008-12-26 Xiangru Chen: the first version.
+
+Arguments:
+swapFile: the name of the swap file.
+

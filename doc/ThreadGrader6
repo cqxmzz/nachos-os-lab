@@ -1,0 +1,16 @@
+Purpose:
+ThreadGrader6: More Priority Scheduling
+
+Test ThreadGrader6.a: Tests priority donation 
+Test ThreadGrader6.b: Tests priority donation with more locks and more complicated resource allocation 
+
+See also official test case guide.
+
+Author:
+isaacyang
+
+History:
+2008-11-26 isaacyang: first version
+
+Arguments:
+N/A

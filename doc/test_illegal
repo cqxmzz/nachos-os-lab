@@ -1,0 +1,12 @@
+Purpose:
+Test the join system calls, it should neither succeed nor crash if a process joins to a non-parent process.
+
+Usage:
+-- nachos.ag.CoffGrader -x test_illegal.coff -# output=test_illegal.out
+
+Author:
+Chunzhi Su
+
+History:
+2011-07-01 Chunzhi Su: The first version.
+

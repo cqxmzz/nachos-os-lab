@@ -1,0 +1,16 @@
+Purpose:
+ThreadGrader5: Priority Scheduling
+
+Test ThreadGrader5.a: Tests priority scheduler without donation 
+Test ThreadGrader5.b: Tests priority scheduler without donation, altering priorities of threads after they've started running 
+
+See also official test case guide.
+
+Author:
+isaacyang
+
+History:
+2008-11-26 isaacyang: first version
+
+Arguments:
+N/A

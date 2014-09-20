@@ -1,0 +1,16 @@
+Purpose:
+Test copying files larger than one page.
+
+Usage:
+-- nachos.ag.CoffGrader -x test_files2.coff -# output=test_files2.out
+
+Author:
+Xiangru Chen
+
+History:
+2008-12-24 Xiangru Chen: The first version.
+
+Dependencies:
+hello.coff
+	print a "hello nachos!" message.
+

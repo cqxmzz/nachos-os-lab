@@ -1,0 +1,11 @@
+-[] conf/proj2.conf -- nachos.ag.AutoGrader -x shCXR.coff
+-[] conf/proj2.conf -- nachos.ag.CoffGrader -x test_files.coff
+-[] conf/proj2.conf -- nachos.ag.CoffGrader -x test_files2.coff -# output=test_files2.out
+-[] conf/proj2.conf -- nachos.ag.CoffGrader -x test_matmult.coff -# output=test_matmult.out
+-[] conf/proj2.conf -- nachos.ag.CoffGrader -x test_proc.coff -# output=test_proc.out
+-[] conf/proj2.conf -- nachos.ag.UserGrader1  -x grader_user1.coff
+-[] conf/proj2.conf -- nachos.ag.CoffGrader -x test_files3.coff -# output=test_files3.out
+-[] conf/proj2.conf -- nachos.ag.CoffGrader -x test_illegal.coff -# output=test_illegal.out
+-[] conf/proj2.conf -- nachos.ag.CoffGrader -x test_memalloc.coff -# output=test_memalloc.out
+-[] conf/proj2.conf -- nachos.ag.CoffGrader -x test_memalloc2.coff
+-[] conf/proj2.conf -- nachos.ag.CoffGrader -x test_memalloc3.coff -# output=test_memalloc3.out

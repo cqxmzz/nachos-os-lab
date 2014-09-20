@@ -1,0 +1,27 @@
+Purpose:
+Test the virtual memory with some processes that each needs plenty of pages and may cause page fault frequently.
+
+Usage:
+-- nachos.ag.VMGrader -x vm_skipfill.coff -# coffPar0=xxx,coffPar1=xxx,coffPar2=xxx
+
+Author:
+Xiangru Chen
+
+History:
+2008-12-26 Xiangru Chen: The first version.
+
+Dependencies:
+vm_skipfill_child.coff
+	Store some value into memory, and load them later.
+	This program may use plenty of pages and may cause page fault frequently.
+
+Arguments:
+coffPar0: the number of child processes that will be forked to run "vm_skipfill_child.coff".
+coffPar1: the number of pages that each "vm_skipfill_child.coff" will use to store data.
+coffPar2: the skip factor. It means that, only (PAGE_SIZE / (2 ^ "skip factor")) bytes in each page will be used. When the test seems too slow, increase this value to speed it up.
+
+Sample:
+-- nachos.ag.VMGrader -x vm_skipfill.coff -# coffPar0=5,coffPar1=32,coffPar2=4
+
+Note: The fewer physical pages there are, the stricter and slower this test will be.
+
